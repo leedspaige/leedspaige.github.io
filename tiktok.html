@@ -113,6 +113,449 @@ business question to predictive model.
 
 </section>
 
+<section class="case-section">
+
+    <div class="case-section-label">
+        <p>01</p>
+        <p>The Challenge</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Which videos<br>
+            contain claims?
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                TikTok needed a more scalable way to distinguish videos
+                containing factual claims from videos expressing opinions.
+                The goal was to identify meaningful behavioral patterns,
+                evaluate potential predictors, and build a model that could
+                help prioritize claim-based content for moderation review.
+            </p>
+
+            <p>
+                The project used a dataset of 19,382 TikTok videos across
+                12 variables, including claim status, author characteristics,
+                video duration, and engagement metrics such as views, likes,
+                comments, shares, and downloads.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-statement">
+
+    <p class="statement-label">Business Question</p>
+
+    <blockquote>
+        Can engagement, creator, and video characteristics
+        accurately distinguish claims from opinions?
+    </blockquote>
+
+</section>
+
+
+<section class="case-section">
+
+    <div class="case-section-label">
+        <p>02</p>
+        <p>Analytical Workflow</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            One dataset.<br>
+            Five stages.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                The analysis progressed from initial data inspection
+                through exploratory analysis, statistical testing,
+                regression, and machine learning.
+            </p>
+
+            <p>
+                Each stage built on the findings from the previous one,
+                creating a complete analytical workflow from data quality
+                review to model recommendation.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="process-grid">
+
+        <div class="process-step">
+            <p class="process-number">01</p>
+            <h3>Inspect</h3>
+            <p>
+                Reviewed structure, data types, missing values,
+                summary statistics, and engagement distributions.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="process-number">02</p>
+            <h3>Explore</h3>
+            <p>
+                Used Python and Tableau to compare claims and opinions,
+                visualize distributions, and identify outliers.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="process-number">03</p>
+            <h3>Test</h3>
+            <p>
+                Conducted a Welch two-sample t-test to evaluate
+                differences in views by verification status.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="process-number">04</p>
+            <h3>Model</h3>
+            <p>
+                Built a logistic regression model and evaluated
+                coefficients, accuracy, and classification results.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="process-number">05</p>
+            <h3>Optimize</h3>
+            <p>
+                Compared tuned Random Forest and XGBoost models
+                and selected the strongest champion model.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-section case-section-dark">
+
+    <div class="case-section-label">
+        <p>03</p>
+        <p>Exploratory Findings</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Engagement tells<br>
+            a clear story.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                Claim and opinion videos appeared in nearly equal
+                proportions, but their engagement patterns differed.
+                Claim videos generally received higher engagement.
+            </p>
+
+            <p>
+                Views and likes showed a strong positive relationship.
+                Engagement variables were highly right-skewed with many
+                high-value outliers, while video duration was distributed
+                more evenly.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="metric-list">
+
+        <div class="metric-row">
+            <p>01</p>
+            <h3>19,382 Videos</h3>
+            <p>12 variables inspected</p>
+        </div>
+
+        <div class="metric-row">
+            <p>02</p>
+            <h3>Claims ≈ Opinions</h3>
+            <p>Nearly balanced target classes</p>
+        </div>
+
+        <div class="metric-row">
+            <p>03</p>
+            <h3>Views + Likes</h3>
+            <p>Strong positive relationship</p>
+        </div>
+
+        <div class="metric-row">
+            <p>04</p>
+            <h3>Right-Skewed Engagement</h3>
+            <p>Many legitimate viral outliers</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-section">
+
+    <div class="case-section-label">
+        <p>04</p>
+        <p>Statistical Analysis</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Verification status<br>
+            mattered.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                A Welch two-sample t-test was used to compare average
+                video views for verified and unverified accounts.
+            </p>
+
+            <p>
+                The test found a statistically significant difference.
+                Unverified accounts averaged approximately 265,664 views,
+                compared with approximately 91,439 views for verified
+                accounts.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="results-hero">
+
+        <div class="result-primary">
+
+            <p class="result-value">2.61×10⁻¹²⁰</p>
+
+            <p class="result-caption">
+                p-value from the Welch two-sample t-test.
+            </p>
+
+        </div>
+
+        <div class="result-secondary">
+
+            <div class="result-card">
+                <p class="result-value-small">265K</p>
+                <p>
+                    Mean views for videos posted by unverified accounts.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-value-small">91K</p>
+                <p>
+                    Mean views for videos posted by verified accounts.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-section results-section">
+
+    <div class="case-section-label">
+        <p>05</p>
+        <p>Machine Learning</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Random Forest<br>
+            won.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                Random Forest and XGBoost classifiers were trained,
+                tuned with GridSearchCV, and evaluated using precision,
+                recall, F1-score, and accuracy.
+            </p>
+
+            <p>
+                Random Forest was selected as the champion model because
+                it slightly outperformed XGBoost while producing fewer
+                false negatives—important when the business goal is to
+                avoid missing videos containing claims.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="results-hero">
+
+        <div class="result-primary">
+
+            <p class="result-value">≈1.0</p>
+
+            <p class="result-caption">
+                Near-perfect precision, recall, F1-score,
+                and accuracy across validation and test data.
+            </p>
+
+        </div>
+
+        <div class="result-secondary">
+
+            <div class="result-card">
+                <p class="result-value-small">RF</p>
+                <p>
+                    Champion model selected over XGBoost.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-value-small">5</p>
+                <p>
+                    Engagement variables ranked among the strongest predictors.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-section">
+
+    <div class="case-section-label">
+        <p>06</p>
+        <p>Key Predictors</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Behavior was more<br>
+            predictive than identity.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                The strongest predictors of claim status were behavioral
+                engagement measures rather than creator identity alone.
+            </p>
+
+            <p>
+                Video view count, like count, download count, share count,
+                and comment count contributed most strongly to classification.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="impact-grid">
+
+        <article>
+            <p>01</p>
+            <h3>Video views</h3>
+            <p>
+                One of the strongest indicators of claim-based content.
+            </p>
+        </article>
+
+        <article>
+            <p>02</p>
+            <h3>Likes + shares</h3>
+            <p>
+                Helped distinguish engagement patterns between content types.
+            </p>
+        </article>
+
+        <article>
+            <p>03</p>
+            <h3>Downloads + comments</h3>
+            <p>
+                Added further predictive signal to the final model.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="case-section">
+
+    <div class="case-section-label">
+        <p>07</p>
+        <p>Business Impact</p>
+    </div>
+
+    <div class="case-two-column">
+
+        <h2>
+            Decision support,<br>
+            not auto-moderation.
+        </h2>
+
+        <div class="case-body-copy">
+
+            <p>
+                The model could help TikTok prioritize videos likely to
+                contain claims, allowing moderation teams to focus human
+                review where it is most needed.
+            </p>
+
+            <p>
+                The recommended implementation maintains human oversight,
+                monitors model fairness and drift, and retrains the model
+                as new content and behavior patterns emerge.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="case-statement reflection-section">
+
+    <p class="statement-label">Reflection</p>
+
+    <blockquote>
+        This project showed how exploratory analysis,
+        statistics, and machine learning can work together
+        to move from a broad business question to a practical
+        decision-support system.
+    </blockquote>
+
+</section>
+
 </main>
 
 <footer>
