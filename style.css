@@ -1172,13 +1172,3 @@ small{
     border-bottom:1px solid var(--text);
     padding-bottom:3px;
 }
-
-.custom-sup {
-    display: inline-block;
-    position: relative;
-    top: -0.72em;
-    margin-left: 0.04em;
-    font-size: 0.38em;
-    line-height: 1;
-    letter-spacing: -0.05em;
-}
