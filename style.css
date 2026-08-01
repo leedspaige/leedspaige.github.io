@@ -721,6 +721,12 @@ footer p:nth-child(3) {
     letter-spacing: -0.09em;
 }
 
+.result-value sup {
+    font-size: 0.35em;
+    vertical-align: super;
+    line-height: 0;
+}
+
 .result-caption {
     max-width: 500px;
 
