@@ -733,11 +733,11 @@ footer p:nth-child(3) {
 
 .stat-exponent {
     display: inline-block;
-    margin-top: 0.08em;
-    margin-left: 0.03em;
+    margin-top: -0.02em;
+    margin-left: 0.08em;
     font-size: 0.24em;
     line-height: 1;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.02em;
 }
 
 .result-caption {
