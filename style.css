@@ -722,9 +722,8 @@ footer p:nth-child(3) {
 }
 
 .result-value sup {
-    font-size: 0.35em;
-    vertical-align: super;
-    line-height: 0;
+    font-size: 0.32em;
+    vertical-align: 1.15em;
 }
 
 .result-caption {
