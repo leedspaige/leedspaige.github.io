@@ -721,9 +721,23 @@ footer p:nth-child(3) {
     letter-spacing: -0.09em;
 }
 
-.result-value sup {
-    font-size: 0.32em;
-    vertical-align: 1.15em;
+.result-value {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+
+.stat-base {
+    display: inline-block;
+}
+
+.stat-exponent {
+    display: inline-block;
+    margin-top: 0.08em;
+    margin-left: 0.03em;
+    font-size: 0.28em;
+    line-height: 1;
+    letter-spacing: -0.03em;
 }
 
 .result-caption {
