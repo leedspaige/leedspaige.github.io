@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Predicting Employee Attrition | Paige Leeds
+    </title>
+
+    <meta
+        name="description"
+        content="A predictive analytics case study by Paige Leeds using logistic regression to identify employee attrition risk and support retention strategy."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="case-study-page">
+
+    <nav class="site-nav">
+        <a class="wordmark" href="index.html">PAIGE LEEDS</a>
+
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="case-hero">
+
+            <div class="case-kicker">
+                <span>Predictive Analytics</span>
+                <span>Logistic Regression</span>
+                <span>2026</span>
+            </div>
+
+            <h1>
+                Predicting<br>
+                employee<br>
+                attrition.
+            </h1>
+
+            <div class="case-intro">
+
+                <p class="case-intro-large">
+                    A predictive model designed to help Salifort Motors
+                    identify employee turnover risk and support more
+                    targeted retention decisions.
+                </p>
+
+                <div class="case-summary">
+                    <p>
+                        Employee turnover creates recruiting costs,
+                        productivity losses, and gaps in organizational
+                        knowledge.
+                    </p>
+
+                    <p>
+                        Using employee workforce data, I conducted exploratory
+                        analysis and developed a logistic regression model
+                        to estimate which employees were more likely to leave.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="case-meta-grid">
+
+                <div>
+                    <p class="case-meta-label">Program</p>
+                    <p>Google Advanced Data Analytics</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Dataset</p>
+                    <p>14,999 Employee Records</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Model</p>
+                    <p>Logistic Regression</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Tools</p>
+                    <p>Python · Pandas · Scikit-learn</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>01</p>
+                <p>Overview</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Why do employees<br>
+                    leave?
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        Salifort Motors wanted to better understand which
+                        workplace factors were associated with employee
+                        turnover and whether departures could be predicted
+                        using historical workforce data.
+                    </p>
+
+                    <p>
+                        The project focused on identifying meaningful
+                        attrition patterns, evaluating predictive performance,
+                        and translating model results into practical
+                        recommendations for HR and workforce planning.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-statement">
+
+            <p class="statement-label">Business Question</p>
+
+            <blockquote>
+                Can employee characteristics and workplace conditions
+                be used to identify workers at greater risk of leaving?
+            </blockquote>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>02</p>
+                <p>Analytical Workflow</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    From employee data<br>
+                    to retention strategy.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The project followed the PACE framework, progressing
+                        from business planning and data preparation through
+                        exploratory analysis, model construction, evaluation,
+                        and stakeholder recommendations.
+                    </p>
+
+                    <p>
+                        Each stage was designed to connect technical analysis
+                        with a clear business objective: reducing preventable
+                        employee turnover.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-step">
+                    <p class="process-number">01</p>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        Defined the business problem, stakeholders,
+                        objectives, and measures of model success.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">02</p>
+
+                    <h3>Prepare</h3>
+
+                    <p>
+                        Inspected, cleaned, standardized, and validated
+                        the employee dataset.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">03</p>
+
+                    <h3>Explore</h3>
+
+                    <p>
+                        Analyzed employee characteristics, distributions,
+                        outliers, and attrition patterns.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">04</p>
+
+                    <h3>Model</h3>
+
+                    <p>
+                        Built a logistic regression model to classify
+                        whether an employee would leave.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">05</p>
+
+                    <h3>Recommend</h3>
+
+                    <p>
+                        Translated findings into retention strategies
+                        and future model improvements.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section case-section-dark">
+
+            <div class="case-section-label">
+                <p>03</p>
+                <p>Employee Data</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Ten variables.<br>
+                    One outcome.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The dataset contained 14,999 employee records
+                        across ten variables, with no missing values.
+                    </p>
+
+                    <p>
+                        The target variable measured whether an employee
+                        remained with the company or left.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="metric-list">
+
+                <div class="metric-row">
+                    <p>01</p>
+                    <h3>Satisfaction Level</h3>
+                    <p>Employee-reported job satisfaction</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>02</p>
+                    <h3>Performance Evaluation</h3>
+                    <p>Most recent evaluation score</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>03</p>
+                    <h3>Workload</h3>
+                    <p>Projects and average monthly hours</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>04</p>
+                    <h3>Company Tenure</h3>
+                    <p>Years spent at the organization</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>05</p>
+                    <h3>Employee Experience</h3>
+                    <p>Promotion and workplace-accident history</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>06</p>
+                    <h3>Role Context</h3>
+                    <p>Department and salary level</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>04</p>
+                <p>Exploratory Analysis</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Turnover reflected<br>
+                    workplace conditions.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        Exploratory analysis examined how satisfaction,
+                        workload, working hours, tenure, salary, department,
+                        promotion history, and performance differed between
+                        employees who stayed and employees who left.
+                    </p>
+
+                    <p>
+                        The patterns suggested that employee turnover was
+                        associated with lower satisfaction and demanding
+                        workload conditions rather than one isolated factor.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="impact-grid">
+
+                <article>
+                    <p>01</p>
+
+                    <h3>Job satisfaction</h3>
+
+                    <p>
+                        Lower satisfaction appeared more frequently among
+                        employees who left the company.
+                    </p>
+                </article>
+
+                <article>
+                    <p>02</p>
+
+                    <h3>Working hours</h3>
+
+                    <p>
+                        Longer working hours contributed to patterns
+                        associated with employee turnover.
+                    </p>
+                </article>
+
+                <article>
+                    <p>03</p>
+
+                    <h3>Workload</h3>
+
+                    <p>
+                        Project demands and workload intensity were relevant
+                        when evaluating attrition risk.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>05</p>
+                <p>Model Development</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    A transparent<br>
+                    baseline model.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        Logistic regression was selected as an interpretable
+                        classification model suitable for estimating the
+                        probability that an employee would leave.
+                    </p>
+
+                    <p>
+                        Numerical and categorical employee variables were
+                        prepared for modeling, then evaluated using accuracy,
+                        precision, recall, F1 score, ROC-AUC, and a confusion
+                        matrix.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="model-flow">
+
+                <div>
+                    <span>01</span>
+                    <p>Employee Data</p>
+                </div>
+
+                <span class="flow-arrow">→</span>
+
+                <div>
+                    <span>02</span>
+                    <p>Data Preparation</p>
+                </div>
+
+                <span class="flow-arrow">→</span>
+
+                <div>
+                    <span>03</span>
+                    <p>Logistic Regression</p>
+                </div>
+
+                <span class="flow-arrow">→</span>
+
+                <div>
+                    <span>04</span>
+                    <p>Model Evaluation</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section results-section">
+
+            <div class="case-section-label">
+                <p>06</p>
+                <p>Model Results</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Strong overall.<br>
+                    Limited recall.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The model produced solid overall classification
+                        performance, reaching 83.4% accuracy and a ROC-AUC
+                        of 0.83.
+                    </p>
+
+                    <p>
+                        However, recall for employees who left was only
+                        20.5%, meaning the model identified employees who
+                        stayed much more successfully than employees who
+                        departed.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="results-hero">
+
+                <div class="result-primary">
+
+                    <p class="result-value">83.4%</p>
+
+                    <p class="result-caption">
+                        Overall logistic regression classification accuracy.
+                    </p>
+
+                </div>
+
+                <div class="result-secondary">
+
+                    <div class="result-card">
+
+                        <p class="result-value-small">0.83</p>
+
+                        <p>
+                            ROC-AUC, indicating good overall separation
+                            between employee outcomes.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <p class="result-value-small">20.5%</p>
+
+                        <p>
+                            Recall for employees who left the company.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="result-explanation">
+
+                <p>
+                    Accuracy alone did not tell the complete story.
+                    Because the model missed many actual departures,
+                    it would not be reliable enough to independently
+                    determine which employees require intervention.
+                </p>
+
+                <p>
+                    The model is better positioned as an early screening
+                    tool that supports human review rather than replacing
+                    HR judgment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>07</p>
+                <p>Business Recommendations</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Retention requires<br>
+                    human intervention.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The results point toward organizational conditions
+                        that may be addressed before an employee decides
+                        to leave.
+                    </p>
+
+                    <p>
+                        Retention strategy should combine model-assisted
+                        screening with direct employee feedback and
+                        responsible management action.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="impact-grid">
+
+                <article>
+                    <p>01</p>
+
+                    <h3>Monitor workload</h3>
+
+                    <p>
+                        Identify teams and employees experiencing sustained
+                        high workloads or excessive monthly hours.
+                    </p>
+                </article>
+
+                <article>
+                    <p>02</p>
+
+                    <h3>Improve work-life balance</h3>
+
+                    <p>
+                        Review staffing, project allocation, and management
+                        practices that may contribute to burnout.
+                    </p>
+                </article>
+
+                <article>
+                    <p>03</p>
+
+                    <h3>Measure satisfaction</h3>
+
+                    <p>
+                        Use regular employee surveys and follow-up conversations
+                        to identify concerns before they become resignations.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>08</p>
+                <p>Next Steps</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Improving attrition<br>
+                    detection.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The next modeling priority should be increasing
+                        recall for employees who leave while maintaining
+                        acceptable precision and overall performance.
+                    </p>
+
+                    <p>
+                        Potential improvements include addressing class
+                        imbalance, engineering additional features, tuning
+                        model parameters, and comparing logistic regression
+                        with decision trees, Random Forest, and gradient
+                        boosting models.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-statement reflection-section">
+
+            <p class="statement-label">Ethical Use</p>
+
+            <blockquote>
+                Attrition predictions should support employee care—not
+                become the sole basis for decisions about individual workers.
+            </blockquote>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="section-heading">
+                <p>Project Files</p>
+                <p>Explore</p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Python Notebook</p>
+
+                    <small>
+                        View the complete exploratory analysis,
+                        logistic regression workflow, and evaluation.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="salifort-notebook.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Notebook ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Executive Summary</p>
+
+                    <small>
+                        Stakeholder-facing overview of results,
+                        recommendations, and next steps.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="salifort-executive-summary.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Summary ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>PACE Strategy</p>
+
+                    <small>
+                        Project-planning framework documenting the
+                        analytical approach and decision process.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="salifort-pace.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Strategy ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Selected Work</p>
+
+                    <small>
+                        Return to the complete portfolio project index.
+                    </small>
+                </div>
+
+                <p>
+                    <a href="index.html#work">
+                        Back to Portfolio ↖
+                    </a>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Paige Leeds</p>
+        <p>Employee Attrition Case Study</p>
+        <p>2026</p>
+    </footer>
+
+</body>
+</html>
