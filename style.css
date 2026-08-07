@@ -1212,20 +1212,13 @@ small{
 }
 
 .about-hero-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-}
-
-.about-hero-meta span:nth-child(2) {
-    text-align: center;
-}
-
-.about-hero-meta span:nth-child(3) {
-    text-align: right;
 }
 
 .about-hero h1 {
@@ -1386,18 +1379,6 @@ small{
     .about-hero {
         min-height: 75vh;
         padding: 100px 18px 35px;
-    }
-
-    .about-hero-meta {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .about-hero-meta span:nth-child(2) {
-        text-align: right;
-    }
-
-    .about-hero-meta span:nth-child(3) {
-        display: none;
     }
 
     .about-hero h1 {
