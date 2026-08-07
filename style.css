@@ -1201,7 +1201,7 @@ small{
 }
 
 .about-hero {
-    min-height: 85vh;
+    min-height: 75vh;
     padding: 120px 28px 50px;
 
     display: flex;
