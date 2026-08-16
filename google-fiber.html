@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Google Fiber Repeat Calls Analysis | Paige Leeds
+    </title>
+
+    <meta
+        name="description"
+        content="A business intelligence case study by Paige Leeds analyzing repeat customer support calls across markets and issue types using BigQuery, SQL, and Tableau."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="case-study-page">
+
+    <nav class="site-nav">
+        <a class="wordmark" href="index.html">PAIGE LEEDS</a>
+
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="case-hero">
+
+            <div class="case-kicker">
+                <span>Business Intelligence</span>
+                <span>BigQuery + Tableau</span>
+                <span>2026</span>
+            </div>
+
+            <h1>
+                Understanding<br>
+                repeat customer<br>
+                calls.
+            </h1>
+
+            <div class="case-intro">
+
+                <p class="case-intro-large">
+                    A business intelligence project designed to identify
+                    repeat customer support patterns across markets,
+                    issue types, and subsequent contacts.
+                </p>
+
+                <div class="case-summary">
+                    <p>
+                        Repeat calls can signal unresolved customer issues
+                        and opportunities to improve first-contact resolution.
+                    </p>
+
+                    <p>
+                        I consolidated customer-support data from three markets
+                        in BigQuery, analyzed repeat-contact behavior, and built
+                        an interactive Tableau story for stakeholder exploration.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="case-meta-grid">
+
+                <div>
+                    <p class="case-meta-label">Program</p>
+                    <p>Google Business Intelligence</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Dataset</p>
+                    <p>3 Market Datasets</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Focus</p>
+                    <p>Repeat Call Analysis</p>
+                </div>
+
+                <div>
+                    <p class="case-meta-label">Tools</p>
+                    <p>BigQuery · SQL · Tableau</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>01</p>
+                <p>Overview</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    What drives<br>
+                    repeat calls?
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The Google Fiber customer service team wanted to
+                        understand how often customers contacted support again
+                        after their initial inquiry and how effectively issues
+                        were being resolved on first contact.
+                    </p>
+
+                    <p>
+                        The analysis focused on repeat-call frequency,
+                        differences across markets, issue types generating
+                        additional contacts, and how customer calls continued
+                        through subsequent contact stages.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-statement">
+
+            <p class="statement-label">Business Question</p>
+
+            <blockquote>
+                How often do customers contact support again after their
+                initial inquiry, and how do repeat-call patterns vary
+                across markets, issue types, and subsequent contacts?
+            </blockquote>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>02</p>
+                <p>BI Workflow</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    From raw calls<br>
+                    to decision support.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The project moved from stakeholder requirements and
+                        data preparation through SQL transformation, analysis,
+                        visualization, and stakeholder communication.
+                    </p>
+
+                    <p>
+                        Each step supported a single objective: creating a
+                        consistent view of repeat-call behavior that could be
+                        explored across markets, issues, and time.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-step">
+                    <p class="process-number">01</p>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        Defined stakeholder needs, business questions,
+                        metrics, and dashboard requirements.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">02</p>
+
+                    <h3>Prepare</h3>
+
+                    <p>
+                        Loaded three market datasets into BigQuery and
+                        reviewed the reporting structure.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">03</p>
+
+                    <h3>Transform</h3>
+
+                    <p>
+                        Consolidated market records into one reporting
+                        table using SQL and UNION ALL.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">04</p>
+
+                    <h3>Visualize</h3>
+
+                    <p>
+                        Built Tableau views for repeat-call trends,
+                        issue types, markets, and contact depth.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <p class="process-number">05</p>
+
+                    <h3>Share</h3>
+
+                    <p>
+                        Organized findings into an interactive story
+                        and stakeholder-facing summary.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section case-section-dark">
+
+            <div class="case-section-label">
+                <p>03</p>
+                <p>Data Pipeline</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Three markets.<br>
+                    One reporting table.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        Customer-support records were provided as three
+                        separate market datasets with matching structures.
+                    </p>
+
+                    <p>
+                        I loaded each source into BigQuery and combined them
+                        into a unified target table to create one consistent
+                        data source for Tableau.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="model-flow">
+
+                <div>
+                    <span>01</span>
+                    <p>Market 1</p>
+                </div>
+
+                <span class="flow-arrow">+</span>
+
+                <div>
+                    <span>02</span>
+                    <p>Market 2</p>
+                </div>
+
+                <span class="flow-arrow">+</span>
+
+                <div>
+                    <span>03</span>
+                    <p>Market 3</p>
+                </div>
+
+                <span class="flow-arrow">→</span>
+
+                <div>
+                    <span>04</span>
+                    <p>fiber_target</p>
+                </div>
+
+            </div>
+
+            <div class="metric-list">
+
+                <div class="metric-row">
+                    <p>01</p>
+                    <h3>Date Created</h3>
+                    <p>Initial customer-contact date</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>02</p>
+                    <h3>Contact Stages</h3>
+                    <p>Initial through eighth customer contact</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>03</p>
+                    <h3>Issue Type</h3>
+                    <p>Customer-support inquiry category</p>
+                </div>
+
+                <div class="metric-row">
+                    <p>04</p>
+                    <h3>Market</h3>
+                    <p>Service-market identifier</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>04</p>
+                <p>Analysis Strategy</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Measuring where<br>
+                    repeat calls persist.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The analysis distinguished between the first repeat
+                        contact and the broader sequence of subsequent
+                        customer calls.
+                    </p>
+
+                    <p>
+                        Metrics were evaluated across issue types, markets,
+                        and time to identify both high-volume repeat-call
+                        drivers and areas with elevated repeat-call rates.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="impact-grid">
+
+                <article>
+                    <p>01</p>
+
+                    <h3>First repeat-call rate</h3>
+
+                    <p>
+                        Measured the share of initial inquiries followed
+                        by an additional customer contact.
+                    </p>
+                </article>
+
+                <article>
+                    <p>02</p>
+
+                    <h3>Repeat-call volume</h3>
+
+                    <p>
+                        Compared the overall volume of repeat contacts
+                        across issue types and markets.
+                    </p>
+                </article>
+
+                <article>
+                    <p>03</p>
+
+                    <h3>Contact depth</h3>
+
+                    <p>
+                        Tracked how customer contacts continued from the
+                        initial inquiry through later call stages.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>05</p>
+                <p>Dashboard Design</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Three views.<br>
+                    One customer story.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The final Tableau story was organized into three
+                        stakeholder views: Repeat Call Overview,
+                        Repeat Calls by Issue, and Repeat Calls by Market.
+                    </p>
+
+                    <p>
+                        Line charts, bar charts, a market-by-issue heatmap,
+                        and repeat-contact depth views allowed stakeholders
+                        to move from high-level performance to specific
+                        repeat-call drivers.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="impact-grid">
+
+                <article>
+                    <p>01</p>
+
+                    <h3>Overview</h3>
+
+                    <p>
+                        Summarizes market rates, issue volume, and
+                        repeat-call trends over time.
+                    </p>
+                </article>
+
+                <article>
+                    <p>02</p>
+
+                    <h3>Issue Analysis</h3>
+
+                    <p>
+                        Identifies which inquiry types generate the
+                        greatest repeat-call volume and rate.
+                    </p>
+                </article>
+
+                <article>
+                    <p>03</p>
+
+                    <h3>Market Performance</h3>
+
+                    <p>
+                        Compares market trends and how customer contacts
+                        continue across repeat-call stages.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section results-section">
+
+            <div class="case-section-label">
+                <p>06</p>
+                <p>Key Findings</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Market 3 emerged<br>
+                    as the priority.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        Market 3 recorded the highest repeat-call rate
+                        and showed the clearest opportunities for further
+                        investigation.
+                    </p>
+
+                    <p>
+                        Issue-level analysis also revealed that overall
+                        call volume and repeat-call rate did not always
+                        point to the same operational problem.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="results-hero">
+
+                <div class="result-primary">
+
+                    <p class="result-value">15.3%</p>
+
+                    <p class="result-caption">
+                        Market 3 first repeat-call rate at its February peak.
+                    </p>
+
+                </div>
+
+                <div class="result-secondary">
+
+                    <div class="result-card">
+
+                        <p class="result-value-small">35.2%</p>
+
+                        <p>
+                            First repeat-call rate for Type 1 inquiries
+                            in Market 3.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <p class="result-value-small">Type 5</p>
+
+                        <p>
+                            Issue type generating the highest overall
+                            repeat-call volume.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="result-explanation">
+
+                <p>
+                    Market 2 consistently maintained the lowest repeat-call
+                    rates during the three-month period, while Market 3
+                    remained substantially higher.
+                </p>
+
+                <p>
+                    The contrast suggests that market-level operating
+                    conditions and specific issue types should be investigated
+                    together rather than evaluating overall volume alone.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>07</p>
+                <p>Business Recommendations</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Focus intervention<br>
+                    where calls repeat.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The findings provide a clear starting point for
+                        investigating customer-service processes associated
+                        with repeat contacts.
+                    </p>
+
+                    <p>
+                        Teams should prioritize areas where both repeat-call
+                        volume and repeat-call rate indicate unresolved
+                        customer needs.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="impact-grid">
+
+                <article>
+                    <p>01</p>
+
+                    <h3>Investigate Market 3</h3>
+
+                    <p>
+                        Review service processes and inquiry handling in
+                        the market with the highest repeat-call rate.
+                    </p>
+                </article>
+
+                <article>
+                    <p>02</p>
+
+                    <h3>Review Type 5 volume</h3>
+
+                    <p>
+                        Identify why Type 5 generates the greatest volume
+                        of subsequent customer contacts.
+                    </p>
+                </article>
+
+                <article>
+                    <p>03</p>
+
+                    <h3>Prioritize Type 1</h3>
+
+                    <p>
+                        Examine Type 1 inquiries in Market 3, where the
+                        first repeat-call rate reached 35.2%.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="case-section-label">
+                <p>08</p>
+                <p>Next Steps</p>
+            </div>
+
+            <div class="case-two-column">
+
+                <h2>
+                    Monitor performance<br>
+                    over time.
+                </h2>
+
+                <div class="case-body-copy">
+                    <p>
+                        The dashboard can support continued monitoring of
+                        repeat-call patterns as new customer-service data
+                        becomes available.
+                    </p>
+
+                    <p>
+                        Future analysis could incorporate longer time periods,
+                        additional service dimensions, and operational context
+                        to better understand the causes behind repeat contacts.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-statement reflection-section">
+
+            <p class="statement-label">Business Impact</p>
+
+            <blockquote>
+                Repeat-call analysis turns customer-service activity into
+                actionable signals for improving first-contact resolution.
+            </blockquote>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <div class="section-heading">
+                <p>Project Files</p>
+                <p>Explore</p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Interactive Tableau Story</p>
+
+                    <small>
+                        Explore the complete interactive repeat-call
+                        dashboard published in Tableau Public.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="https://public.tableau.com/app/profile/paige.leeds5595/viz/GoogleFiberRepeatCallsAnalysis/RepeatCallsAnalysis"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Story ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>SQL / BigQuery Pipeline</p>
+
+                    <small>
+                        View the SQL used to consolidate three market
+                        datasets into the unified reporting table.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="https://github.com/leedspaige/leedspaige.github.io/blob/main/google_fiber_pipeline.sql"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View SQL ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Executive Summary</p>
+
+                    <small>
+                        Stakeholder-facing overview of findings,
+                        recommendations, and analytical workflow.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="google-fiber-executive-summary.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Summary ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>BI Project Planning</p>
+
+                    <small>
+                        Project documentation covering stakeholders,
+                        requirements, strategy, and dashboard mockup.
+                    </small>
+                </div>
+
+                <p>
+                    <a
+                        href="google-fiber-bi-project-planning.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Planning ↗
+                    </a>
+                </p>
+            </div>
+
+            <div class="credential-row">
+                <div>
+                    <p>Selected Work</p>
+
+                    <small>
+                        Return to the complete portfolio project index.
+                    </small>
+                </div>
+
+                <p>
+                    <a href="index.html#work">
+                        Back to Portfolio ↖
+                    </a>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Paige Leeds</p>
+        <p>Google Fiber BI Case Study</p>
+        <p>2026</p>
+    </footer>
+
+</body>
+</html>
