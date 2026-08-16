@@ -1485,7 +1485,7 @@ small{
 }
 
 /* =========================================
-   THESIS CTA ARROWS
+   THESIS CTA ARROWS — MATCHED
    ========================================= */
 
 .thesis-cta {
@@ -1494,16 +1494,28 @@ small{
     gap: 0.28em;
 }
 
+/* Build one identical arrow icon for both links */
 .thesis-cta::after {
+    content: "";
     display: inline-block;
-    font-size: 0.9em;
-    line-height: 1;
+    width: 0.9em;
+    height: 0.9em;
+    flex-shrink: 0;
+
+    background: currentColor;
+
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='square' stroke-linejoin='miter' d='M5 19L19 5M9 5h10v10'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='square' stroke-linejoin='miter' d='M5 19L19 5M9 5h10v10'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
-.thesis-cta.forward-link::after {
-    content: "↗";
-}
-
+/* Same exact arrow, simply rotated */
 .thesis-cta.back-link::after {
-    content: "↖";
+    transform: rotate(-90deg);
 }
