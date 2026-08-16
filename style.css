@@ -1429,3 +1429,11 @@ small{
         font-size: clamp(2.8rem, 13vw, 4.5rem);
     }
 }
+
+.chunky-arrow {
+    display: inline-block;
+}
+
+.arrow-up-right {
+    transform: rotate(90deg);
+}
