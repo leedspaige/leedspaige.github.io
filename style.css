@@ -1430,10 +1430,18 @@ small{
     }
 }
 
+/* CONSISTENT CHUNKY ARROWS */
+
 .chunky-arrow {
     display: inline-block;
 }
 
+/* ↗ */
 .arrow-up-right {
     transform: rotate(90deg);
+}
+
+/* ↓ */
+.arrow-down {
+    transform: rotate(135deg);
 }
