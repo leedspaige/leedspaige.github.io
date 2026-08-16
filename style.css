@@ -1443,5 +1443,5 @@ small{
 
 /* ↓ */
 .arrow-down {
-    transform: rotate(135deg);
+    transform: rotate(-135deg);
 }
