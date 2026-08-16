@@ -1483,3 +1483,27 @@ small{
     transform: translateY(-50%) rotate(45deg);
     transform-origin: left center;
 }
+
+/* =========================================
+   THESIS CTA ARROWS
+   ========================================= */
+
+.thesis-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28em;
+}
+
+.thesis-cta::after {
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+.thesis-cta.forward-link::after {
+    content: "↗";
+}
+
+.thesis-cta.back-link::after {
+    content: "↖";
+}
