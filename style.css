@@ -1485,37 +1485,31 @@ small{
 }
 
 /* =========================================
-   THESIS CTA ARROWS — MATCHED
+   THESIS CTA ARROWS — CHUNKY
    ========================================= */
 
 .thesis-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.28em;
+    gap: 0.22em;
 }
 
-/* Build one identical arrow icon for both links */
+/* Use ONE chunky arrow glyph for both */
 .thesis-cta::after {
-    content: "";
+    content: "↖";
     display: inline-block;
-    width: 0.9em;
-    height: 0.9em;
+    font-size: 0.82em;
+    font-weight: 400;
+    line-height: 1;
     flex-shrink: 0;
-
-    background: currentColor;
-
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='square' stroke-linejoin='miter' d='M5 19L19 5M9 5h10v10'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
-
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='square' stroke-linejoin='miter' d='M5 19L19 5M9 5h10v10'/%3E%3C/svg%3E");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
 }
 
-/* Same exact arrow, simply rotated */
+/* Rotate the same chunky arrow to point up-right */
+.thesis-cta.forward-link::after {
+    transform: rotate(90deg);
+}
+
+/* Original direction for Return to selected work */
 .thesis-cta.back-link::after {
-    transform: rotate(-90deg);
+    transform: none;
 }
