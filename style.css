@@ -1645,3 +1645,13 @@ small{
         line-height: 0.95;
     }
 }
+
+/* Long mobile case-study titles */
+
+.tiktok-page .hero h1,
+.google-fiber-page .case-hero h1 {
+    font-size: clamp(50px, 13vw, 66px);
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+}
