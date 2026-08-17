@@ -1445,3 +1445,197 @@ small{
 .arrow-down {
     transform: rotate(-135deg);
 }
+
+/* =========================================
+   MOBILE — CASE STUDIES + ABOUT
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Prevent accidental horizontal overflow */
+    .case-study-page,
+    .about-page {
+        overflow-x: hidden;
+    }
+
+    .case-study-page *,
+    .about-page * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- CASE STUDY HERO ---------- */
+
+    .case-hero,
+    .case-section,
+    .case-statement {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .case-hero h1 {
+        font-size: clamp(64px, 19vw, 92px);
+        line-height: 0.86;
+        overflow-wrap: break-word;
+    }
+
+    .case-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .case-intro-large,
+    .case-summary {
+        min-width: 0;
+    }
+
+    .case-meta-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+    }
+
+
+    /* ---------- CASE STUDY SECTIONS ---------- */
+
+    .case-section-label {
+        width: 100%;
+    }
+
+    .case-two-column {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .case-two-column > * {
+        min-width: 0;
+    }
+
+    .case-two-column h2 {
+        font-size: clamp(52px, 15vw, 76px);
+        line-height: 0.9;
+        overflow-wrap: break-word;
+    }
+
+    .process-grid,
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-row {
+        grid-template-columns: 40px 1fr;
+        gap: 10px 16px;
+    }
+
+    .metric-row > :last-child {
+        grid-column: 2;
+    }
+
+    .model-flow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+    }
+
+
+    /* ---------- RESULTS ---------- */
+
+    .results-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .result-secondary {
+        grid-template-columns: 1fr;
+    }
+
+    .result-value {
+        font-size: clamp(64px, 20vw, 100px);
+    }
+
+    .result-explanation {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+
+    /* ---------- PROJECT FILES ---------- */
+
+    .case-section .credential-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .case-section .credential-row > p:last-child {
+        justify-self: start;
+        text-align: left;
+    }
+
+
+    /* =========================================
+       ABOUT PAGE
+       ========================================= */
+
+    .about-hero,
+    .about-profile,
+    .about-details,
+    .about-statement {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(64px, 19vw, 92px);
+        line-height: 0.86;
+        overflow-wrap: break-word;
+    }
+
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image-wrap,
+    .about-profile-copy {
+        min-width: 0;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .about-details .section-heading {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .about-detail-grid article {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .about-detail-grid article > div {
+        min-width: 0;
+    }
+
+    .about-detail-grid h2 {
+        font-size: clamp(48px, 14vw, 72px);
+        line-height: 0.9;
+        overflow-wrap: break-word;
+    }
+
+    .about-detail-grid p {
+        overflow-wrap: break-word;
+    }
+
+    .about-statement p {
+        font-size: clamp(42px, 12vw, 64px);
+        line-height: 0.95;
+    }
+}
