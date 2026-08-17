@@ -1645,3 +1645,22 @@ small{
         line-height: 0.95;
     }
 }
+
+/* ========================================
+   MOBILE-SPECIFIC PROJECT TITLES
+======================================== */
+
+.mobile-title {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .desktop-title {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+}
