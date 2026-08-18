@@ -1679,3 +1679,11 @@ small{
         object-position: center 30%;
     }
 }
+
+.about-signature {
+    display: block;
+    width: 70px;
+    height: auto;
+    margin: 50px 0 0 auto;
+    transform: rotate(-8deg);
+}
